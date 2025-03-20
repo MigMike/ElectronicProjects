@@ -126,7 +126,7 @@ void loop() {
 - Click on Program file to able to choose your .hex file then click "OK" to upload to your arduino component.
 
 **Configurations**
-- On the "Edit Component" feature locate [clock frequency and initial contents of data EEPROM] to able make adjustments.
+- On the "Edit Component" feature locate [clock frequency and initial contents of data EEPROM] to be able make adjustments.
   
  a) Increasing Clock speed;- (from 16MHz to 20MHz)
  - Delay functions may behave incorrectly since they are based on ("16MHz default timing").
