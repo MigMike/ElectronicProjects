@@ -108,33 +108,81 @@ void loop() {
 
 ## What's missing? 
  - LN2003 driver component is missing .
- - yo 
+ - choose another component to serve the same purpose i.e; L293D.
+ - You can also design your circuit of ULN2003 driver on proteus software.
 
-
-## Adding components to protues project
-
+## Adding components to proteus project
+- After creating a new project on proteus software, a blank root sheet opens.
+- Click on the "P" (Pick Devices) button
+- On search bar choose the desired component the click "OK".
+  
 ## Wiring Components - project 
-
-## Arduino program/sketch
-
-
+- Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
+ 
 ## Uploading sketch binary to simulation
 
--- configurations - clcok speed and effect 
--- eeprom configuration - whats eeprom in the first place. how to use it in this setup?  
+** configurations **
+ a) Increasing Clock speed;- (from 16MHz to 20MHz)
+ - Delay functions may behave incorrectly since they are based on ("16MHz default timing").
+ - PWM frequencies and timing dependent functions will speed causing misbehaviour.
 
-- how about serial monitoring
+ b)Reducing Clock speed;- (frrom 16MHz to 8MHz)
+ - Arduino executes instructions slowing .
+ - Timing- based functions will take long
+ - PWM signal controlled motor driver might slug.
 
+ * General impact on the circuit *
+  - Motor speed is affected since PWM signals are involved.
+ 
+ **EEPROM**   
+- EEPROM- used for storing non- volatile data that persists even after a power cycle.
+
+ **Configurations**
+ - Since the program [above] reads motor speed and direction then modified, motor behaviour will change after reset.
+ - 
+** serial monitoring **
+a). Change in Clock Speed
+- The serial baud rate calculation depends on the clock frequency.
+- If changes are applied serial baud rate will  eventually change.
+- 
+* Possible Impacts *:
+- Communication with external devices (like another microcontroller or PC) may fail due to baud rate mismatch.
+
+b).  EEPROM Changes 
+- If the program reads baud rate settings from EEPROM, changing EEPROM values could modify the serial communication speed.
+- 
+## Issue Resolution
+- Ensure Clock Speed Matches the Expected Baud Rate
+- Manually Set Baud Rate in Serial Monitor (if using Arduino IDE)
+- Add Fallback Baud Rate in Code to Prevent EEPROM Corruption Issues
 
 ## Conclusion
 
-- It is an effective way of doing this at the end of the day.
+  
 
 
 ### Resources 
 
-1. Installation:https://www.labcenter.com 
+1. Proteus Installation:https://www.labcenter.com 
 
 
 ** TODO **
-- A component is missing on proteus - what next ?  
+- If a component is not available on proteus library you should :
+ 1. Manually add the missing component's library on proteus
+ * Example;*
+ If L293D is not available in the default library, follow these steps:
+
+            a). Download the L293D Library for Proteus
+
+            - Search online for "L293D Proteus Library Download" and find a trusted source.
+            - Download the .IDX and .LIB files.
+             
+            b). Install the Library
+            - Move the downloaded .LIB and .IDX files to the Proteus Library Folder, typically found at:
+                 (C:\Program Files (x86)\Labcenter Electronics\Proteus 8 Professional\LIBRARY)
+
+            c). Restart Proteus
+            - Close and reopen Proteus to load the new components.
+
+            d).Search Again
+             - Check if the component is now available in the proteus library.
