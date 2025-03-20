@@ -59,7 +59,7 @@ Step 4: Test the Library
 
 ## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are :
-**Categories** :- 
+  **Categories**  
 1.**Hardware**
  a) Microcontroller 
 - Arduino Uno (fits according to Io pins requirements and stepper motor).
@@ -117,7 +117,7 @@ void loop() {
 - Click on the "P" (Pick Devices) button
 - On search bar choose the desired component the click "OK".
   
-## Wiring Components - project 
+## Wiring Components  
 - Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
  
 ## Uploading sketch binary to simulation
