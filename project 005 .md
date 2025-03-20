@@ -60,16 +60,13 @@ Step 4: Test the Library
 ## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are categorized into:
   
-1.**Hardware**
- a) Microcontroller 
-- Arduino Uno (fits according to Io pins requirements and stepper motor).
- b) Stepper motor 
-- Bipolar [4leaded]
+1.**Hardware** 
+ a) Microcontroller --> Arduino Uno (fits according to Io pins requirements and stepper motor).
+ b) Stepper motor -->Bipolar [4leaded]
  c) Motor driver
-- L293D
- d) Power supply 
-- 5V for stepper motor
-- 5-24V for L293D driver
+ c)L293D motor driver
+ d) Power supply --> 5V for stepper motor
+                 --> 5-24V for L293D driver
 
 2.**Software**
 a) Arduino IDE
