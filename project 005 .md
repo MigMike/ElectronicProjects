@@ -111,11 +111,14 @@ void loop() {
 
 ## Adding components to proteus project
 - After creating a new project on proteus software, a blank root sheet opens.
+- ![alt text](image-2.png)
 - Click on the "P" (Pick Devices) button
 - On search bar choose the desired component the click "OK".
   
 ## Wiring Components  
 - Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
+ ![alt text](image-3.png)
+ ![alt text](image-4.png)
  
 ## Uploading sketch binary to simulation
 
