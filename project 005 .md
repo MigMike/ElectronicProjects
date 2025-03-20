@@ -22,14 +22,14 @@ Step 2: Installing
 Step 3:  Activate Proteus 
 - Licensed version, enter your activation key during installation.
 - Trial/demo, you can skip this step.
-- 
+
 Step 4: Run Proteus
-- Once installed, launch Proteus version that you have from the Start Menu.
-- 
+- Once installed, launch Proteus version  from the Start Menu.
+
 Step 5: Install Additional Libraries (Optional)
 - To use extra microcontrollers (e.g., Arduino) download the  additional library (Arduino library) and copy it into proteus folder location:
 - 
-  ```Example
+* Example
  ## Friendly Guide on How to Add Arduino Library to Proteus:
 Step 1: Download the Arduino Library for Proteus
 
@@ -57,10 +57,10 @@ Step 4: Test the Library
 ## Troubleshooting
 - If you face issues, run the setup as Administrator.
 
-## Requirements/project. 
+## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are :
 - Categories :- 
-**Hardware
+1. Hardware
  a) Microcontroller 
 - Arduino Uno (fits according to Io pins requirements and stepper motor).
  b) Stepper motor 
@@ -71,7 +71,7 @@ Step 4: Test the Library
 - 5V for stepper motor
 - 5-24V for L293D driver
 
-**Software**
+2. Software
 a) Arduino IDE
 - Download from Arduino Official Website.
 b) Required Libraries
@@ -122,7 +122,7 @@ void loop() {
  
 ## Uploading sketch binary to simulation
 
-** configurations **
+**Configurations**
  a) Increasing Clock speed;- (from 16MHz to 20MHz)
  - Delay functions may behave incorrectly since they are based on ("16MHz default timing").
  - PWM frequencies and timing dependent functions will speed causing misbehaviour.
@@ -132,7 +132,7 @@ void loop() {
  - Timing- based functions will take long
  - PWM signal controlled motor driver might slug.
 
- * General impact on the circuit *
+**General impact on the circuit**
   - Motor speed is affected since PWM signals are involved.
  
  **EEPROM**   
@@ -141,13 +141,12 @@ void loop() {
  **Configurations**
  - Since the program [above] reads motor speed and direction then modified, motor behaviour will change after reset.
  - 
-** serial monitoring **
+**serial monitoring**
 a). Change in Clock Speed
 - The serial baud rate calculation depends on the clock frequency.
 - If changes are applied serial baud rate will  eventually change.
 - 
-- Possible Impacts :
- 
+  **Possible Impacts**
 * Communication with external devices (like another microcontroller or PC) may fail due to baud rate mismatch.
 
 b).  EEPROM Changes 
@@ -166,7 +165,7 @@ b).  EEPROM Changes
 
 1. Proteus Installation:https://www.labcenter.com 
 
-** TODO **
+ **TODO**
 
 - If a component is not available on proteus library you should :
  1. Manually add the missing component's library on proteus
