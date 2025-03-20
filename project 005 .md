@@ -58,8 +58,8 @@ Step 4: Test the Library
 - If you face issues, run the setup as Administrator.
 
 ## Project Requirements. 
-- In this Arduino Stepper Control Project, requuirements are :
-  **Categories**  
+- In this Arduino Stepper Control Project, requuirements are categorized into:
+  
 1.**Hardware**
  a) Microcontroller 
 - Arduino Uno (fits according to Io pins requirements and stepper motor).
