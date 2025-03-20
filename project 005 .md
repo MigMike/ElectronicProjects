@@ -12,7 +12,7 @@ Step 1: Download Proteus zip. file
 
 Step 2: Installing 
 - Open the downloaded setup file (.exe).
-- Follow the installation wizard:
+- Follow the installation instructions:
     - Click Next.
     - Accept the license agreement.
     - Choose the installation directory.
@@ -28,7 +28,8 @@ Step 4: Run Proteus
 - 
 Step 5: Install Additional Libraries (Optional)
 - To use extra microcontrollers (e.g., Arduino) download the  additional library (Arduino library) and copy it into proteus folder location:
-  **Example**
+- 
+  ```Example
  ## Friendly Guide on How to Add Arduino Library to Proteus:
 Step 1: Download the Arduino Library for Proteus
 
@@ -59,24 +60,24 @@ Step 4: Test the Library
 ## Requirements/project. 
 - In this Arduino Stepper Control Project, requuirements are :
 - Categories :- 
-         **Hardware**
-         a) Microcontroller 
-           - Arduino Uno (fits according to Io pins requirements and stepper motor).
-         b) Stepper motor 
-           - Bipolar [4leaded]
-         c) Motor driver
-           - L293D
-         d) Power supply 
-           - 5V for stepper motor
-           - 5-24V for L293D driver
+**Hardware
+ a) Microcontroller 
+- Arduino Uno (fits according to Io pins requirements and stepper motor).
+ b) Stepper motor 
+- Bipolar [4leaded]
+ c) Motor driver
+- L293D
+ d) Power supply 
+- 5V for stepper motor
+- 5-24V for L293D driver
 
-        **Software**
-        a) Arduino IDE
-        - Download from Arduino Official Website.
-        b) Required Libraries
-        - Stepper.h (For basic stepper control)
-        - AccelStepper.h (For advanced motion control like acceleration and deceleration)
-        - Install via Arduino Library Manager (Sketch → Include Library → Manage Libraries).
+**Software**
+a) Arduino IDE
+- Download from Arduino Official Website.
+b) Required Libraries
+- Stepper.h (For basic stepper control)
+- AccelStepper.h (For advanced motion control like acceleration and deceleration)
+- Install via Arduino Library Manager (Sketch → Include Library → Manage Libraries).
 
 
         c) Arduino Code:
@@ -145,31 +146,32 @@ a). Change in Clock Speed
 - The serial baud rate calculation depends on the clock frequency.
 - If changes are applied serial baud rate will  eventually change.
 - 
-* Possible Impacts *:
-- Communication with external devices (like another microcontroller or PC) may fail due to baud rate mismatch.
+- Possible Impacts :
+ 
+* Communication with external devices (like another microcontroller or PC) may fail due to baud rate mismatch.
 
 b).  EEPROM Changes 
 - If the program reads baud rate settings from EEPROM, changing EEPROM values could modify the serial communication speed.
-- 
+ 
 ## Issue Resolution
 - Ensure Clock Speed Matches the Expected Baud Rate
 - Manually Set Baud Rate in Serial Monitor (if using Arduino IDE)
 - Add Fallback Baud Rate in Code to Prevent EEPROM Corruption Issues
 
 ## Conclusion
-
+- By tweaking these values, we can control the motor’s speed, direction, and step precision to match our project’s needs.
+- In reference to clock speed and EEPROM, change in values has a significant impact on the circuit.
   
-
-
 ### Resources 
 
 1. Proteus Installation:https://www.labcenter.com 
 
-
 ** TODO **
+
 - If a component is not available on proteus library you should :
  1. Manually add the missing component's library on proteus
- * Example;*
+ - Example;
+  
  If L293D is not available in the default library, follow these steps:
 
             a). Download the L293D Library for Proteus
