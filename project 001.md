@@ -24,8 +24,8 @@
 - Voltage Regulators: The 7812 voltage regulator outputs 12V DC, and the 7805 voltage regulator provides a stable 5V DC.
 - Output Filtering: Additional capacitors (0.1µF) are used to remove high-frequency noise.
 
-## Circuit diagram
-![image](https://github.com/user-attachments/assets/fea141a9-a0e2-4e93-bab4-f6a2519f6f70)
+## Block diagram
+![alt text](image-1.png)
 
 
 ## Working Principle
