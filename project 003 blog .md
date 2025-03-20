@@ -16,7 +16,7 @@ Have you ever wondered how CNC machines, 3D printers, and robots achieve such pr
 
 To bring our stepper motor to life, we need a few essential components. Let’s take a closer look at each one and understand their role in the system.
 1. The Arduino – The Brain of the Operation
-The Arduino Uno serves as the central controller, orchestrating the movement of the stepper motor. It sends electrical pulses in a precise sequence to the ULN2003 driver board, which then translates them into motor movement. Without the Arduino, we’d have no way to direct the motor’s rotation effectively.  (The following link will guide you on how to install and use both your arduino board and software: https://docs.arduino.cc/software/ide-v1/tutorials/Windows)
+The Arduino Uno serves as the central controller, orchestrating the movement of the stepper motor. It sends electrical pulses in a precise sequence to the ULN2003 driver board, which then translates them into motor movement. Without the Arduino, we’d have no way to direct the motor’s rotation effectively.  (The following link will guide you on how to install your arduino  software: https://docs.arduino.cc/software/ide-v1/tutorials/Windows)
 
 2. The Stepper Motor – Precise and Controlled Motion
 The 28BYJ-48 stepper motor is a unipolar motor commonly used in hobby and commercial applications. Unlike regular DC motors, which spin continuously when powered, a stepper motor moves in discrete steps, allowing for fine control over angular movement. This makes it ideal for applications where precision is key, such as 3D printing and robotics.
