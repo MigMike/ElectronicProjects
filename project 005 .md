@@ -28,8 +28,8 @@ Step 4: Run Proteus
 
 Step 5: Install Additional Libraries (Optional)
 - To use extra microcontrollers (e.g., Arduino) download the  additional library (Arduino library) and copy it into proteus folder location:
-- 
-* Example
+
+**Example**
  ## Friendly Guide on How to Add Arduino Library to Proteus:
 Step 1: Download the Arduino Library for Proteus
 
@@ -49,7 +49,7 @@ Step 3: Load the Arduino HEX File (For Simulation)
 - Click on the folder icon and browse to your Arduino HEX file.
 - The HEX file is generated from the Arduino IDE after compiling a sketch.
 - You can find it in the Arduino build directory.
-- 
+
 Step 4: Test the Library
 - Connect components (LEDs, sensors, etc.).Click and hold as you drag your cursor to connect the terminals.
 - Run the simulation to verify functionality.
@@ -59,8 +59,8 @@ Step 4: Test the Library
 
 ## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are :
-- Categories :- 
-1. Hardware
+**Categories** :- 
+1.**Hardware**
  a) Microcontroller 
 - Arduino Uno (fits according to Io pins requirements and stepper motor).
  b) Stepper motor 
@@ -71,7 +71,7 @@ Step 4: Test the Library
 - 5V for stepper motor
 - 5-24V for L293D driver
 
-2. Software
+2.**Software**
 a) Arduino IDE
 - Download from Arduino Official Website.
 b) Required Libraries
