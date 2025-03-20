@@ -114,7 +114,7 @@ void loop() {
 - Click on the "P" (Pick Devices) button
 -  ![alt text](image-2.png)
 - On search bar choose the desired component the click "OK".
-![alt text](image-5.png)  
+- ![alt text](image-5.png)  
 
 ## Wiring Components  
 - Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
