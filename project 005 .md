@@ -122,8 +122,12 @@ void loop() {
  ![alt text](image-4.png)
 
 ## Uploading sketch binary to simulation
+- Double click on the Arduino component, "Edit Component" feature appears.
+- Click on Program file to able to choose your .hex file then click "OK" to upload to your arduino component.
 
 **Configurations**
+- On the "Edit Component" feature locate [clock frequency and initial contents of data EEPROM] to able make adjustments.
+  
  a) Increasing Clock speed;- (from 16MHz to 20MHz)
  - Delay functions may behave incorrectly since they are based on ("16MHz default timing").
  - PWM frequencies and timing dependent functions will speed causing misbehaviour.
