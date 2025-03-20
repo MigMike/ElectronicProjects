@@ -111,15 +111,16 @@ void loop() {
 
 ## Adding components to proteus project
 - After creating a new project on proteus software, a blank root sheet opens.
-- ![alt text](image-2.png)
 - Click on the "P" (Pick Devices) button
+-  ![alt text](image-2.png)
 - On search bar choose the desired component the click "OK".
-  
+![alt text](image-5.png)  
+
 ## Wiring Components  
 - Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
  ![alt text](image-3.png)
  ![alt text](image-4.png)
- 
+
 ## Uploading sketch binary to simulation
 
 **Configurations**
@@ -164,6 +165,7 @@ b).  EEPROM Changes
 ### Resources 
 
 1. Proteus Installation:https://www.labcenter.com 
+2. Downloading Arduino Library for Proteus: https://www.theengineeringprojects.com/2015/12/arduino-library-proteus-simulation.html
 
  **TODO**
 
