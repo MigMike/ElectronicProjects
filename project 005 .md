@@ -1,14 +1,19 @@
-# Proteus Simulation: Arduino Stepper Control
+# Proteus Circuit Simulations
 
 ## Why Proteus
-- An easy to use interface with real-time microcontroller simulation.
-- Supports  both analog and dialog components as it enable firmware testing on microcontrollers (Arduino or PIC)
+
+- Proteus is a design suite with a couple of powerful features set to enable the rapid design, test and layout of PCBs for both educational and professional needs.
+- Supports both analog and digital components. This enables firmware testing on microcontrollers such as Arduino,PICs, and more.
 
 ## Installation of proteus
-Step 1: Download Proteus zip. file
-- Visit the official website (Labcenter Electronics)
-- Click on Download.
-- Choose the free proteus Demonstration Version or the Paid version if have License.
+
+Step 1: Download Proteus
+- Visit the official website [(Labcenter Electronics)](https://www.labcenter.com/)
+- Proteus Design Suite has the following components
+  - Proteus PCB design - provides schematic capture and PCB layout.
+  - Proteus Circuit Simulation - Incorporates SPICE simulation and fast microcontroller simulation. With it you can simulate your electronic circuit before prototyping.
+  - Proteus IoT Builder - Has a visual designer and Proteus VSM for Arduino and Pi products
+- Click on either of the three options and select either a free trial or the paid license version dependending on your needs.
 
 Step 2: Installing 
 - Open the downloaded setup file (.exe).
@@ -19,18 +24,30 @@ Step 2: Installing
     - Select components to install (Proteus, libraries, etc.).
     - Click Install.
 
-Step 3:  Activate Proteus 
+Step 3:  Activate Proteus
 - Licensed version, enter your activation key during installation.
 - Trial/demo, you can skip this step.
 
 Step 4: Run Proteus
-- Once installed, launch Proteus version  from the Start Menu.
+- Once installed, launch your Proteus version  from the Start Menu.
 
-Step 5: Install Additional Libraries (Optional)
-- To use extra microcontrollers (e.g., Arduino) download the  additional library (Arduino library) and copy it into proteus folder location:
 
-**Example**
- ## Friendly Guide on How to Add Arduino Library to Proteus:
+## Creating a project (Arduino Stepper Control)
+ 
+- After the launch, click "New Project" on proteus start menu.
+- Give a Name to your project on the menu that pops up;
+- ![alt text](image-3.png)
+- Click "Next" button then choose whether or not to create a schematic.
+- if chose "DO not create a schematic" then keep clicking "Next" button till a blank root sheet opens up where you choose your components.
+- If chose "Create a schematic ...", you are to select one design template or go with the "Default" (In accordance to project requirements.)
+  
+Step 5: Install Additional Libraries(Optional)
+- To use extra microcontrollers(e.g.,Arduino) download the additional library(Arduino Library) and copy it into proteus folder location:
+  
+## Additional components
+
+For instance, the official proteus installation lib do not have Arduino components. Let me guide through the installation of the Arduino Library. 
+
 Step 1: Download the Arduino Library for Proteus
 
 - Download the Arduino Proteus Library from a trusted source. You can search for "Arduino Proteus Library zip" online.
@@ -60,25 +77,31 @@ Step 4: Test the Library
 ## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are categorized into:
   
-1.**Hardware** 
+1.**Hardware**
+
  a) Microcontroller --> Arduino Uno (fits according to Io pins requirements and stepper motor).
- b) Stepper motor -->Bipolar [4leaded]
- c) Motor driver
- c)L293D motor driver
- d) Power supply --> 5V for stepper motor
-                 --> 5-24V for L293D driver
+ b) Stepper motor -->Bipolar [4leaded].
+
+ c)L293D motor driver.
+
+ d) Power supply --> 5V for stepper motor.
+
+              --> 5-24V for L293D driver
 
 2.**Software**
+
 a) Arduino IDE
 - Download from Arduino Official Website.
+  
 b) Required Libraries
 - Stepper.h (For basic stepper control)
 - AccelStepper.h (For advanced motion control like acceleration and deceleration)
 - Install via Arduino Library Manager (Sketch → Include Library → Manage Libraries).
 
 
-        c) Arduino Code:
+c) Arduino Code:
 - Write the code to match the project needs [speed, direction and step precision]
+
 
 ```cpp
 #include <Stepper.h>
@@ -105,25 +128,25 @@ void loop() {
 
 
 ## What's missing? 
- - LN2003 driver component is missing .
+ - ULN2003 driver component is missing .
  - choose another component to serve the same purpose i.e; L293D.
  - You can also design your circuit of ULN2003 driver on proteus software.
 
 ## Adding components to proteus project
 - After creating a new project on proteus software, a blank root sheet opens.
 - Click on the "P" (Pick Devices) button
--  ![alt text](image-2.png)
+-  ![alt text](images/image-2.png)
 - On search bar choose the desired component the click "OK".
-- ![alt text](image-5.png)  
+- ![alt text](images/image-5.png)  
 
 ## Wiring Components  
 - Take the cursor and click on one terminal then drag and click on the other terminal to complete the circuit.
- ![alt text](image-3.png)
- ![alt text](image-4.png)
+ ![alt text](images/image-3.png)
+ ![alt text](images/image-4.png)
 
 ## Uploading sketch binary to simulation
 - Double click on the Arduino component, "Edit Component" feature appears.
-- Click on Program file to able to choose your .hex file then click "OK" to upload to your arduino component.
+- Click on Program file to be able to choose your .hex file then click "OK" to upload to your arduino component.
 
 **Configurations**
 - On the "Edit Component" feature locate [clock frequency and initial contents of data EEPROM] to be able make adjustments.
@@ -168,7 +191,7 @@ b).  EEPROM Changes
   
 ### Resources 
 
-1. Proteus Installation:https://www.labcenter.com 
+1. Proteus Installation: https://www.labcenter.com 
 2. Downloading Arduino Library for Proteus: https://www.theengineeringprojects.com/2015/12/arduino-library-proteus-simulation.html
 
  **TODO**
@@ -193,3 +216,6 @@ b).  EEPROM Changes
 
             d).Search Again
              - Check if the component is now available in the proteus library.
+
+ 2. Choose a different component of same family to serve same purpose.
+    (i.e, replace ULN2003 with L293D)
