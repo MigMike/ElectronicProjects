@@ -25,8 +25,8 @@
 - Output Filtering: Additional capacitors (0.1µF) are used to remove high-frequency noise.
 
 ## Block diagram
-![alt text](image-1.png)
 
+![alt text](image.png)
 
 ## Working Principle
 
