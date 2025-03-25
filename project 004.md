@@ -48,8 +48,7 @@ A 4-digit 7-segment display typically consists of 7 LED segments (A to G) and a 
 - Connect digit control pins (D1-D4) to Arduino digital pins.
 - Connect display common cathodes to GND.
 ---
-![image](https://github.com/user-attachments/assets/e5d35ac6-6f35-481c-b085-e15693d95e7f)
-
+![alt text](image-5.png)
 ---
 ## Arduino Code
 ```cpp
