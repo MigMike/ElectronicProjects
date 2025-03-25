@@ -47,8 +47,8 @@ Arduino       ULN2003 Driver       Stepper Motor (28BYJ-48)
   D11  --->   IN4
 ```
 With this setup, the ULN2003 driver board handles the power-intensive task of driving the motor while the Arduino focuses on sending precise control signals.
-![image](https://github.com/user-attachments/assets/55332f7d-eb70-42ea-a1ff-e331ecb4a8de)
 
+![alt text](image-4.png)
 ## Arduino Code:
 Now that our hardware is set up, let's program the Arduino to control the stepper motor.
 ```cpp

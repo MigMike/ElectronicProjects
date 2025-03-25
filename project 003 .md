@@ -48,9 +48,8 @@ Arduino       ULN2003 Driver       Stepper Motor (28BYJ-48)
 ULN2003 Output pins connect to the motor's coils.
 External 5V DC supply recommended for motor power.
 ```
-![image](https://github.com/user-attachments/assets/55332f7d-eb70-42ea-a1ff-e331ecb4a8de)
-![image](https://github.com/user-attachments/assets/c2267f2f-f625-4f20-8f7d-0c729531e29e)
-
+![alt text](image-4.png)
+![alt text](image-2.png)
 ---
 
 ## Arduino Code
