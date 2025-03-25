@@ -21,7 +21,7 @@ The **ULN2003** has 16 pins:
 | 9          | **COM**       | Common cathode for flyback diodes (connect to motor supply voltage) |
 | 10-16     | **OUT7 - OUT1** | Output pins to drive loads |
 ---
-![alt text](image.png)
+![alt text](image-1.png)
 
 ---
 ## Components Required:
