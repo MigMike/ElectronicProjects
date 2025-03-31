@@ -30,16 +30,6 @@ Step 3:  Activate Proteus
 
 Step 4: Run Proteus
 - Once installed, launch your Proteus version  from the Start Menu.
-
-
-## Creating a project (Arduino Stepper Control)
- 
-- After the launch, click "New Project" on proteus start menu.
-- Give a Name to your project on the menu that pops up;
-- ![alt text](image-3.png)
-- Click "Next" button then choose whether or not to create a schematic.
-- if chose "DO not create a schematic" then keep clicking "Next" button till a blank root sheet opens up where you choose your components.
-- If chose "Create a schematic ...", you are to select one design template or go with the "Default" (In accordance to project requirements.)
   
 Step 5: Install Additional Libraries(Optional)
 - To use extra microcontrollers(e.g.,Arduino) download the additional library(Arduino Library) and copy it into proteus folder location:
@@ -71,9 +61,86 @@ Step 4: Test the Library
 - Connect components (LEDs, sensors, etc.).Click and hold as you drag your cursor to connect the terminals.
 - Run the simulation to verify functionality.
 
+## Key Features of Proteus 
+
+1. Schematic Capture (Circuit Design)
+- You can draw circuit diagrams using different electronic components like resistors, capacitors, transistors, and microcontrollers.
+- It works like a virtual breadboard where you connect components to see how they interact.
+
+2. Simulation (Testing Your Circuit)
+- Once you design your circuit, you can simulate it to check if it works correctly.
+- For example, if you create an LED blinking circuit, you can see the LED turning on and off on your computer screen.
+
+3. PCB Design (Printed Circuit Board Layout)
+- If you want to make a real electronic circuit, you can convert your schematic into a PCB layout.
+- You arrange components on a board and create connections (called "traces") just like a real circuit board.
+
+4. Microcontroller Simulation
+- You can write and test code for microcontrollers like Arduino, PIC, and AVR inside Proteus.
+- This means you can run a virtual program to see how a microcontroller will behave before actually uploading it to real hardware.
+
+
 ## Troubleshooting
 - If you face issues, run the setup as Administrator.
+  
+ ## Writing Firmware Using Proteus 
+ - Running a firmware based-project using proteus requires a different approach.
+  
+  **Example**
+  ### Firmware project:
+  ### LED Project(blinking LED)
+- Create a new project ,name the project on "project wizard menu".
+- Selected a suitable compiler from "Development board"
+- ![alt text](image-6.png)
+- click "finish" .
+- On the root sheet you already have ATMEGA328P chip,select other components by clicking pick device button[P].
+  ### Components Needed
+  - Button
+  - LED-yellow
+  - Resistor -470ohm's (change resistance value by right clicking on the component then select "edit properties").
 
+  ### Project PCB Design 
+  - ![alt text](image-7.png)
+  
+  ### Project Source Code:
+- On the left upper corner of the root sheet there are both "Schematic capture" and "source code" button.
+- After you are done with the schematic, clicking on the "source code" button.
+- Write your code here.
+  
+  **Code**
+```cpp
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
+}
+``` 
+- Finish writing the code then click on the "Build" button on the upper left corner of the screen.Under "Build" button click "Build Project" to upload your code to the controller.
+- Click the pause button on the bottom left corner of your  screen to run the setup.
+ 
+ - ![alt text](image-8.png)
+   ### Troubleshooting 
+   - If  faced with changelle uploading yourcode, trace the issue using the terminal below the code.
+   - Run the setup as administrator(optional).
+  
+## New project (Arduino Stepper Control)
+ 
+- After the launch, click "New Project" on proteus start menu.
+- Give a Name to your project on the menu that pops up;
+- ![alt text](image-3.png)
+- Click "Next" button then choose whether or not to create a schematic.
+- if chose "DO not create a schematic" then keep clicking "Next" button till a blank root sheet opens up where you choose your components.
+- If chose "Create a schematic ...", you are to select one design template or go with the "Default" (In accordance to project requirements.)
+  
+Step 5: Install Additional Libraries(Optional)
+- To use extra microcontrollers(e.g.,Arduino) download the additional library(Arduino Library) and copy it into proteus folder location:
 ## Project Requirements. 
 - In this Arduino Stepper Control Project, requuirements are categorized into:
   
