@@ -203,7 +203,7 @@ void loop() {
 - After creating a new project on proteus software, a blank root sheet opens.
 - Click on the "P" (Pick Devices) button
 -  ![alt text](images/image-2.png)
-- On search bar choose the desired component the click "OK".
+- On search bar choose the desired component then click "OK".
 - ![alt text](images/image-5.png)  
 
 ## Wiring Components  
@@ -215,7 +215,7 @@ void loop() {
 - Double click on the Arduino component, "Edit Component" feature appears.
 - Click on Program file to be able to choose your .hex file then click "OK" to upload to your arduino component.
 
-**Configurations**
+**Configurations and impacts**
 - On the "Edit Component" feature locate [clock frequency and initial contents of data EEPROM] to be able make adjustments.
   
  a) Increasing Clock speed;- (from 16MHz to 20MHz)
@@ -233,7 +233,7 @@ void loop() {
  **EEPROM**   
 - EEPROM- used for storing non- volatile data that persists even after a power cycle.
 
- **Configurations**
+ **Configurations and impacts**
  - Since the program [above] reads motor speed and direction then modified, motor behaviour will change after reset.
  - 
 **serial monitoring**
