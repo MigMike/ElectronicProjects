@@ -105,7 +105,7 @@ void loop() {
 3. Click **Build Project** to compile and upload the code.
 4. Press the **Run Simulation** button to observe the LED blinking in Proteus.
 
-### **Project PCB Design**
+### **Project PCB Layout**
 ![alt text](image-7.png)
 ---
 
