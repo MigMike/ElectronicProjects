@@ -30,27 +30,6 @@ Choose between the free trial or the paid license version based on your needs.
 
 ### **Step 4: Launch Proteus**
 Once installed, open Proteus from the Start Menu and begin exploring its features.
-
----
-
-## **Adding Additional Libraries**
-By default, Proteus does not include all microcontrollers, such as Arduino components. You can manually add libraries to expand its capabilities.
-
-### **Step 1: Download the Required Library**
-Search online for "Arduino Proteus Library zip" and download it from a trusted source. Extract the .zip file to obtain .IDX, .LIB, and .HEX files.
-
-### **Step 2: Copy Library Files**
-Navigate to your Proteus installation folder and copy the .LIB and .IDX files into the **LIBRARY** folder.
-
-### **Step 3: Load the HEX File for Simulation**
-1. Open Proteus and create a new project.
-2. Click on the **"P" (Pick Devices)** button.
-3. Search for "Arduino" and select the desired board (e.g., Arduino Uno, Mega, Nano).
-4. Place the component on the schematic.
-5. Double-click the Arduino component and locate the **"Program File"** section.
-6. Click the folder icon and browse for the compiled .HEX file from your Arduino IDE.
-7. Connect components such as LEDs and sensors, then run the simulation.
-
 ---
 
 ## **Key Features of Proteus**
