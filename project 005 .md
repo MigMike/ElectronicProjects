@@ -125,7 +125,9 @@ void loop() {
 ```
 
 ---
-
+## Block Diagram
+- ![alt text](images/image-4.png)
+- ![alt text](image-4.png)
 ## **Troubleshooting**
 ### **Common Issues and Solutions**
 
