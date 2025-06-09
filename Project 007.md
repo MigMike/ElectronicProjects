@@ -14,20 +14,6 @@ Most electronics circuits require stable DC voltage for reliable operation, yet 
 
 * Demonstrates foundational principles of power electronics
 
-## Block Diagram of the Power Supply
-- 220V AC Mains
-       │
-   - Step-Down Transformer (24-0-24V, 5A)
-       │
-- Full-Wave Bridge Rectifier (HER307 Diodes)
-       │
-     - Filter Capacitor (4700µF)
-       │
- - Adjustable Linear Regulators (LM317T)
-      - ├───────────> 24V Output
-      - ├───────────> 12V Output
-      - ├───────────> 5V Output
-      - └───────────> Zener Clamped 3.3V Output
   ## Multisim and Bench circuit diagram
   ![alt text](<images/images S2/image-15.png>)
  ![alt text](<images/images S2/power sup. image.jpg>)
@@ -61,8 +47,7 @@ A full-wave bridge rectifier is formed using four HER307 high-speed diodes (D1�
 Each 24V AC output (RMS) converts to a peak voltage of:
 
 𝑉
-peak
-=
+peak=
 24
 𝑉
 ×
