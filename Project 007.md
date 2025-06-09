@@ -29,8 +29,8 @@ Most electronics circuits require stable DC voltage for reliable operation, yet 
       - ├───────────> 5V Output
       - └───────────> Zener Clamped 3.3V Output
   ## Multisim and Bench circuit diagram
-  ![alt text](image-2.png)
- ![alt text](<power sup. image.jpg>)
+  ![alt text](<images/images S2/image-15.png>)
+ ![alt text](<images/images S2/power sup. image.jpg>)
  
 ## **Transformer Stage – Voltage Step-Down**
 #### **EI-76X45 Transformer (24-0-24V, 5A, 50Hz)**
@@ -43,8 +43,9 @@ Delivers dual 24V outputs, peaking at ~34V after rectification.
 It simplifies full-wave rectification and provides a symmetric ground reference.
 ### Multisim simulation: 
 * Using multisim or any other simulation software ,you can run a test on an oscilloscope to check the output signal from each stage of the power supply ;
-![alt text](<Screenshot 2025-06-08 201036.png>)
-> In our case the 24Vrms is the transformer output.
+
+![alt text](<images/images S2/image.png>)
+> In this case the 24Vrms V1 source is the transformer output.
 
 ## **Rectification Stage – AC to DC Conversion**
 **Bridge Rectifier using HER307 Diodes**
@@ -87,7 +88,7 @@ DC
 ### Multisim simulation:
 The image shows the output signal on the oscilloscope after the voltage is rectified ;
 
-![alt text](<Screenshot 2025-06-08 205604.png>)
+![alt text](<images/images S2/Multisim OSC. rectifier Dis..png>)
 
 ## **Filtering Stage – Ripple Reduction**
  **Bulk Filter Capacitor (C1 = 4700µF, 50V)**
@@ -100,7 +101,7 @@ A large electrolytic capacitor (4700µF) smooths the pulsating DC output from th
 
 Smaller capacitors (100µF, 33µF) are added after each regulator to improve load response and suppress noise.
 ### Multisim simulation 
-  ![alt text](image-3.png)
+  ![alt text](<images/images S2/image-14.png>)
   - From the simulation , it can be determine that the output voltage after filtering still has ripples . That's why we need an Input capacitor at the beginning of regulation.
   
 ## **Voltage Regulation Stage – LM317T Adjustable Regulators**
