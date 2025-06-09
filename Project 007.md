@@ -14,7 +14,7 @@ Most electronics circuits require stable DC voltage for reliable operation, yet 
 
 * Demonstrates foundational principles of power electronics
 
-  ## Multisim and Bench circuit diagram
+  ## **Multisim and Bench circuit diagram**
   ![alt text](<images/images S2/image-15.png>)
  ![alt text](<images/images S2/power sup. image.jpg>)
  
@@ -26,9 +26,9 @@ The power supply begins with a center-tapped step-down transformer, model EI-76X
 Delivers dual 24V outputs, peaking at ~34V after rectification.
 
 **Why use a center-tapped transformer?**
-It simplifies full-wave rectification and provides a symmetric ground reference.
-### Multisim simulation: 
-* Using multisim or any other simulation software ,you can run a test on an oscilloscope to check the output signal from each stage of the power supply ;
+It is ideal for full-wave rectification application and provides a symmetric ground reference.
+### **Multisim simulation:** 
+* Using Multisim or any other simulation software, you can run a test on an oscilloscope to check the output signal from each stage of the power supply ;
 
 ![alt text](<images/images S2/image.png>)
 > In this case the 24Vrms V1 source is the transformer output.
@@ -43,15 +43,20 @@ A full-wave bridge rectifier is formed using four HER307 high-speed diodes (D1�
 * 1000V peak reverse voltage
 * Fast recovery time (ideal for large capacitors)
 
- #### Peak DC Calculation
+The following link provides more details about HER307 diodes ; <https://www.alldatasheet.com/datasheet-pdf/pdf/842834/DSK/HER307.html>
+
+ ### Peak DC Calculation
+  **Formula:**
+ V_peak= V_rms × √2
+
 Each 24V AC output (RMS) converts to a peak voltage of:
 
-𝑉
+𝑉_
 peak=
 24
 𝑉
 ×
-root 2
+√2
 ≈
 33.9
 𝑉
@@ -71,7 +76,7 @@ DC
 𝑉
 
 ### Multisim simulation:
-The image shows the output signal on the oscilloscope after the voltage is rectified ;
+The diagram shows the output signal on the oscilloscope after the voltage is rectified ;
 
 ![alt text](<images/images S2/Multisim OSC. rectifier Dis..png>)
 
@@ -87,11 +92,13 @@ A large electrolytic capacitor (4700µF) smooths the pulsating DC output from th
 Smaller capacitors (100µF, 33µF) are added after each regulator to improve load response and suppress noise.
 ### Multisim simulation 
   ![alt text](<images/images S2/image-14.png>)
-  - From the simulation , it can be determine that the output voltage after filtering still has ripples . That's why we need an Input capacitor at the beginning of regulation.
+  - From the simulation , it can be determined that the output voltage after filtering still has ripples . That's why we need an Input capacitor at the beginning of regulation.
   
 ## **Voltage Regulation Stage – LM317T Adjustable Regulators**
 #### Introduction to LM317T
 The LM317T is a 3-terminal adjustable voltage regulator capable of supplying 1.2V to 37V at up to 1.5A. It maintains output voltage regardless of load current or input voltage (within limits).
+For more details, I have provided a link ; {[https://www.alldatasheet.com/datasheet-pdf/pdf/441393/ISC/LM317T.html]}
+
 
 𝑉
 out=
@@ -238,3 +245,7 @@ This detailed guide demonstrates how to design a robust, linear, multi-output DC
 
 Each stage was explained step-by-step to teach the underlying principles and design considerations. This approach is ideal for beginners looking to build a power supply from scratch while learning core concepts of analog power electronics.
 
+### Resources:
+1. https://www.alldatasheet.com/datasheet-pdf/pdf/441393/ISC/LM317T.html
+2. https://www.alldatasheet.com/datasheet-pdf/download/15025/PHILIPS/1N4728A.html 
+3. https://www.alldatasheet.com/datasheet-pdf/pdf/842834/DSK/HER307.html
