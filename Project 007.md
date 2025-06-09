@@ -20,7 +20,7 @@ Most electronics circuits require stable DC voltage for reliable operation, yet 
  
 ## **Transformer Stage – Voltage Step-Down**
 #### **EI-76X45 Transformer (24-0-24V, 5A, 50Hz)**
-The power supply begins with a center-tapped step-down transformer, model EI-76X45, which converts the dangerous 220V AC mains into a much safer 24-0-24V AC at 5A.
+The power supply begins with a center-tapped step-down transformer, model EI-76X45, which converts the dangerous 220Vrms AC mains into a much safer 24-0-24Vrms AC at 5A.
 
 * Center tap provides a grounded midpoint, enabling full-wave rectification.
 Delivers dual 24V outputs, peaking at ~34V after rectification.
