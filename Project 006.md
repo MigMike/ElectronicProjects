@@ -31,7 +31,7 @@ This article presents a complete and beginner-friendly design that:
 * Type: EI-76X45
 * Output: 24-0-24V AC, 5A, 50Hz
 
-A center-tapped step-down transformer converts the 220V AC mains to 24-0-24V AC. The center tap provides a grounded reference, enabling full-wave rectification. The peak voltage after rectification reaches approximately 34V.
+A center-tapped step-down transformer converts the 220V AC mains to 24 V AC. This center-tap configuration is a common method for achieving full-wave rectification, especially at higher voltages. The peak voltage after rectification reaches approximately 34V. This provides sufficient headroom for voltage regulation down to 24 V, 12 V, 5 V, and 3.3 V while ensuring continuous operation at up to 1 A per output rail.
 
 ### **Simulation Output**
 
@@ -45,6 +45,7 @@ A full-wave bridge rectifier using four HER307 high-speed diodes (D1–D4) conve
 * Peak Reverse Voltage: 1000V
 * Fast Recovery Time
 
+Refer to : <https://www.alldatasheet.com/datasheet-pdf/view/58731/DCCOM/HER307.html> for more details.
 ### **Peak Voltage Calculation**
 
 $V_{peak} = V_{rms} \times \sqrt{2} = 24V \times 1.414 \approx 33.9V$
@@ -71,7 +72,19 @@ Smaller capacitors (100μF, 33μF) placed after each regulator further suppress 
 
 ## **Voltage Regulation Stage – LM317T Adjustable Regulators**
 
-The LM317T is a 3-terminal adjustable regulator capable of supplying 1.2V to 37V at up to 1.5A. It maintains regulation regardless of load (within thermal and voltage limits).
+The LM317T is a 3-terminal adjustable regulator capable of supplying 1.2V to 37V at up to 1.5A. In this design, each regulated output is configured for a maximum load current of 1 A, ensuring thermal and electrical reliability within device limits. 
+
+Refer to:<https://www.alldatasheet.com/datasheet-pdf/view/558026/TI1/LM317T.html> for details.
+
+### Why LM317T Instead of 78XX Series?
+While fixed-voltage regulators like the 7805 or 7812 are convenient, the LM317T offers key advantages in this application:
+
+* Adjustability: A single regulator can be configured for multiple voltages using external resistors.
+* Greater flexibility: Ideal for custom or non-standard voltage rails.
+* Improved line and load regulation: Superior transient response and output accuracy with proper bypassing.
+* Availability and cost: Readily available and cost-effective for educational and prototyping purposes.
+
+
 
 **Output Voltage Formula:**
 $V_{out} = 1.25V \times \left(1 + \frac{R_2}{R_1}\right)$
@@ -80,20 +93,19 @@ $V_{out} = 1.25V \times \left(1 + \frac{R_2}{R_1}\right)$
 
 * R1 = 1kΩ, R2 = 18.2kΩ
 * $V_{out1} = 1.25 \times (1 + 18.2k / 1k) \approx 24V$
-* Use: Powering relays, motor drivers, audio amplifiers
+* Applicable in; Powering relays, motor drivers, audio amplifiers
 * Capacitors: 300μF and 33μF
 
 ### **12V Output (U2)**
 
 * R1 = 1kΩ, R2 = 8.6kΩ
 * $V_{out2} = 1.25 \times (1 + 8.6k / 1k) \approx 12V$
-* Use: Logic circuits, op-amps, development boards
-
+* Common applications include; powering logic circuits, operational amplifiers, and development boards
 ### **5V Output (U3)**
 
 * R1 = 240Ω, R2 = 720Ω
 * $V_{out3} = 1.25 \times (1 + 720 / 240) = 5V$
-* Use: Microcontrollers, USB-powered devices
+* Applicable in; Microcontrollers, USB-powered devices
 
 ## **3.3V Zener Clamp**
 
@@ -103,12 +115,12 @@ A 1N4728A Zener diode clamps the 5V rail to 3.3V for low-current applications.
 * Power Rating: 1W
 * Series resistor (10Ω) limits current
 
-**Note:** Zener diodes are not efficient for high-current regulation; use only for low-power logic or reference lines.
+**Note:** Zener diodes are not efficient for high-current regulation; use only for low-power logic or reference lines.Refer to: <https://www.alldatasheet.com/datasheet-pdf/view/562536/VISHAY/1N4728A.html> for more details.
 
 ## **Thermal and Safety Considerations**
 
 * **Heat Dissipation:** LM317s can dissipate significant heat. For example:
-  $P = (32V - 5V) \times 1A = 27W$
+  $P = (32V - 12V) \times 1A = 20W$
   Use heat sinks accordingly.
 * **Enclosure:** Use a ventilated metal or plastic enclosure.
 * **Fusing:** Place fuses or PTC resettable fuses after the transformer.
@@ -142,6 +154,6 @@ Each stage was explained with theoretical justification and simulation results, 
 
 ## **References**
 
-1. LM317T Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/pdf/441393/ISC/LM317T.html](https://www.alldatasheet.com/datasheet-pdf/pdf/441393/ISC/LM317T.html)
-2. 1N4728A Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/download/15025/PHILIPS/1N4728A.html](https://www.alldatasheet.com/datasheet-pdf/download/15025/PHILIPS/1N4728A.html)
-3. HER307 Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/pdf/842834/DSK/HER307.html](https://www.alldatasheet.com/datasheet-pdf/pdf/842834/DSK/HER307.html)
+1. LM317T Adjustable Regulator Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/view/558026/TI1/LM317T.htmll](https://www.alldatasheet.com/datasheet-pdf/view/558026/TI1/LM317T.html)
+2. 1N4728A Zener Diode Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/view/562536/VISHAY/1N4728A.html](https://www.alldatasheet.com/datasheet-pdf/view/562536/VISHAY/1N4728A.html)
+3. HER307 rectifier diode Datasheet. Available: [https://www.alldatasheet.com/datasheet-pdf/view/58731/DCCOM/HER307.html](https://www.alldatasheet.com/datasheet-pdf/view/58731/DCCOM/HER307.html)
