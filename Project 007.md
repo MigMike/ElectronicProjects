@@ -48,7 +48,7 @@ The terminals of a BJT are:
 * Base (B)
 * Collector (C)
 * Emitter (E)
-![Figure 1: Bipolar Junction Transistors](<Transistors.png>)
+  ![Figure1 : Bipolar Junction Transistor](images/Transistors.png)
 
 **How It Works:**
 
@@ -77,8 +77,8 @@ A practical example: using a BJT to turn on an LED.
 * 10kΩ resistor at the base
   
 ## Circuirt diagram
-![Figure 2: Switching a Load (open circuit) ](<image TC.png>)
-![Figure 3: switching a load (closed ciruit)](<image TC (b).png>)
+![Figure 2: Switching a Load (open circuit) ](<images/image TC.png>)
+![Figure 3: switching a load (closed ciruit)](<images/image TC (b).png>)
 
 **Operation:**
 
