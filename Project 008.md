@@ -3,7 +3,7 @@ title: Project 008.md
 
 ---
 
-# Title: Building a Transistor-Based Combination Lock: A Step-by-Step Educational Guide
+# Title: Building a Transistor-Based Combination Lock
 
 ## Introduction
 Combination locks are foundational elements in electronic security systems, used in everything from door locks to safe boxes. While digital systems like microcontrollers and keypads dominate modern designs, building a transistor-based combination lock offers an excellent opportunity for electronics enthusiasts and students to understand the basics of logic circuits using discrete components.
