@@ -100,12 +100,7 @@ Step	Condition	Result
 ***Longer sequences:*** Add more stages with additional Qn and Sn pairs.
 
 ## Additional Resources
-- [LTSpice and Multisim Simulation Tools](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
+- [NI Multisim Simulation Tool](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)
+
 
 - [2N2222 Datasheet (Philips) - AllDataSheet](https://www.alldatasheet.com/datasheet-pdf/view/15067/PHILIPS/2N2222.html)
-
-- [Andre's Udemy course discussion forums for circuit help](https://www.udemy.com/) *(navigate to "My Learning" → select the course → Q&A or Discussions tab)*
-
-
-
-
