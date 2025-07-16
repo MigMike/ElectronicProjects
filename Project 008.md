@@ -8,14 +8,16 @@ Welcome to the fascinating world of transistor-based combination locks, a brilli
 In this article, we will explore how this system works, building our understanding from the ground up and diving into the role of each component. By the end, you'll not only appreciate the elegance of discrete design, but you'll also gain practical insight into transistor switching, biasing, capacitive coupling, and sequential logic.
 
 ## System Overview
-### Image diagram
-![Figure 1](images/T-BCL.png)
-![Figure 2](<images/images S2/Transistor-Base CL.png>)
+### Complete Keypad Circuit
+![Figure 1:](<images/images S2/T-BCL.png>)
+
+### Correct Key Chain Circuit
+![Figure 2:](<images/images S2/Transistor-Base CL.png>)
 
 The transistor-based combination lock you see above is composed of:
 
 * 4 NPN Transistors (Q1–Q4) – acting as sequential gates.
-* 4 Momentary Pushbutton Switches (S1–S4) – used to input the correct combination.
+* 4 Momentary Pushbutton Switches (S1–S9) – used to input the correct combination.
 * Electrolytic Capacitors (6.8µF/50V (in this case)) – used for pulse storage and signal coupling.
 * Resistors – for current limiting, pull-down biasing, and LED control.
 * 1 LED – as the final output indicator of a correct sequence.
@@ -63,14 +65,14 @@ Just like in Q1’s stage, turning on Q2 causes its collector to go low, prepari
 * If you press S2 after S1, within a short time window (before the cap discharges), Q2 activates.
 * This is time-sequenced logic without a microcontroller—pure analog engineering.
 
-##### Stage 3 and Stage 4: (S3, Q3) and (S4, Q4)
+##### Stage 3 and Stage 4: (S5, Q3) and (S9 , Q4)
 These two stages are exact replicas of Stage 2, creating an extended combination sequence.
 
 **Functional Implications:**
 * Each stage depends on the charge held by the capacitor at the previous stage’s emitter. These small capacitors hold enough charge for a few seconds, giving a short time window to press the next switch.
 * If you press a switch too early or too late, the corresponding transistor base gets no voltage, and the sequence breaks.
 
-This way, only the correct timing and sequence of S1 → S2 → S3 → S4 will allow the chain to propagate.
+This way, only the correct timing and sequence of S1 → S2 → S5 → S9 will allow the chain to propagate.
 
 **Final Output: LED Activation**
 * Once Q4 is activated, we reach the final stage of the lock:
@@ -89,8 +91,8 @@ If the sequence is broken at any point, Q4 never turns on, and the LED stays dar
 Step	Condition	Result
 * S1	Pressed → Base of Q1 triggered 	Q1 turns on briefly
 * S2	Pressed  during Q1 emission Q2 turns on
-* S3	Pressed during Q2 emission	Q3 turns on
-* S4	Pressed during Q3 emission	Q4 turns on
+* S5	Pressed during Q2 emission	Q3 turns on
+* S9	Pressed during Q3 emission	Q4 turns on
 * Q4	On → Emitter powers LED	LED lights up
 
 * If any switch is pressed out of sequence, or too slowly, the prior transistor does not supply voltage to the next base, and the chain breaks.
