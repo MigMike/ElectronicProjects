@@ -84,7 +84,7 @@ The LED lights up—signaling a successful code entry.
 
 If the sequence is broken at any point, Q4 never turns on, and the LED stays dark.
 
-##### System Behavior Summary:
+#### System Behavior Summary:
 Step	Condition	Result
 * S1	Pressed → Base of Q1 triggered 	Q1 turns on briefly
 * S2	Pressed  during Q1 emission Q2 turns on
