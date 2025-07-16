@@ -9,7 +9,8 @@ In this article, we will explore how this system works, building our understandi
 
 ## System Overview
 ### Image diagram
-![Figure 1](<images/Transistor-based combination lock.png>)
+![Figure 1](images/T-BCL.png)
+![Figure 2](<images/images S2/Transistor-Base CL.png>)
 
 The transistor-based combination lock you see above is composed of:
 
